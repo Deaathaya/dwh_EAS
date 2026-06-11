@@ -425,6 +425,4 @@ Pastiin semua ini uda done:
 
 ---
 
-**Selamat! Aplikasi sudah siap di-explore!**
-
-Ada pertanyaan? Cek file `DOKUMENTASI_PROYEK.md` buat info lebih lengkap tentang arsitektur dan database schema.
+Cek file `DOKUMENTASI_PROYEK.md` buat info lengkap tentang arsitektur dan database schemanya
