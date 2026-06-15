@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dim_waktu', function (Blueprint $table) {
-            $table->id('id_waktu');
+            $table->integer('id_waktu')->autoIncrement();
             $table->date('tanggal')->unique();
             $table->integer('tahun');
             $table->integer('bulan');

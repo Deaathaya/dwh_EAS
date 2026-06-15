@@ -9,10 +9,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('fact_penjualan', function (Blueprint $table) {
-            $table->id('id_penjualan');
-            $table->unsignedBigInteger('id_produk');
-            $table->unsignedBigInteger('id_pelanggan');
-            $table->unsignedBigInteger('id_waktu');
+            $table->integer('id_penjualan')->autoIncrement();
+            $table->integer('id_produk');
+            $table->integer('id_pelanggan');
+            $table->integer('id_waktu');
             $table->integer('jumlah');
             $table->decimal('harga_satuan', 10, 2);
             $table->decimal('total_harga', 10, 2);

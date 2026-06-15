@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dim_pelanggan', function (Blueprint $table) {
-            $table->id('id_pelanggan');
+            $table->integer('id_pelanggan')->autoIncrement();
             $table->string('kode_pelanggan', 20)->unique();
             $table->string('nama_pelanggan', 100);
             $table->enum('jenis_kelamin', ['L', 'P']);
