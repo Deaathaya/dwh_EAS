@@ -2,7 +2,7 @@
 
 Dashboard penjualan untuk menganalisis tren, produk, dan pelanggan dengan visualisasi data real-time. Buat dengan React + Node.js + SQLite.
 
-## 🚀 Quick Start
+## Quick Start
 
 Pastikan kamu punya:
 - **PHP 8.1+**
@@ -60,7 +60,7 @@ Aplikasi sudah ready. Coba aja semua fitur di dashboard.
 
 ---
 
-## 📊 Apa Aja Fitur yang Ada?
+## Apa Aja Fitur yang Ada?
 
 ### Dashboard
 - 3 chart buat lihat total penjualan, tren bulanan, sama top customers
@@ -75,7 +75,7 @@ Aplikasi sudah ready. Coba aja semua fitur di dashboard.
 
 ---
 
-## 🗂️ Struktur Folder
+## Struktur Folder
 
 ```
 .
@@ -103,7 +103,7 @@ Aplikasi sudah ready. Coba aja semua fitur di dashboard.
 
 ---
 
-## 🗄️ Database Integration
+## Database Integration
 
 Backend pakai **Laravel** dengan **MySQL**. Semua database setup udah otomatis dengan command di atas.
 
@@ -167,7 +167,7 @@ Kalo semua return angka > 0, database connection aman!
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 Backend adalah API REST yang built-in dengan Laravel. Semua endpoint ada prefix `/api`.
 
@@ -226,7 +226,7 @@ Daftar pelanggan dengan belanja tertinggi. Filter kategori optional.
 
 ---
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### MySQL tidak running
 **Gejala**: `SQLSTATE[HY000] [2002] Connection refused`
@@ -303,7 +303,7 @@ Terus update frontend API URL ke `http://localhost:8001`
 
 ---
 
-## 📝 Tech Stack
+## Tech Stack
 
 - **Frontend**: React 18 + Vite + CSS3
 - **Backend**: Laravel 11 (PHP 8.1+)
@@ -312,7 +312,7 @@ Terus update frontend API URL ke `http://localhost:8001`
 
 ---
 
-## 🎨 Features
+## Features
 
 - ✅ Responsive design (desktop, tablet, mobile)
 - ✅ Real-time filtering
@@ -325,7 +325,7 @@ Terus update frontend API URL ke `http://localhost:8001`
 
 ---
 
-## 📊 Sample Data
+## Sample Data
 
 Database uda punya:
 - 5 produk (Elektronik + Pakaian)
@@ -337,7 +337,7 @@ Cukup buat testing semua fitur. Bisa tambah/edit data lewat aplikasi.
 
 ---
 
-## 🚀 Development
+## Development
 
 ### Frontend Development
 
@@ -382,7 +382,7 @@ Penjualan::sum('total_harga')  // Total penjualan
 
 ---
 
-## 📝 Catatan Penting
+## Catatan Penting
 
 ### Database
 - Database auto-create lewat `php artisan migrate` (ngga perlu import SQL file)
@@ -408,7 +408,7 @@ Penjualan::sum('total_harga')  // Total penjualan
 
 ---
 
-## 🎯 Checklist Setup
+## Checklist Setup
 
 Pastiin semua ini uda done:
 - [ ] MySQL running dan bisa di-access
