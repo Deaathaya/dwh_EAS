@@ -56,7 +56,7 @@ Frontend bakal buka otomatis atau buka manual `http://localhost:5173`
 
 ### 5. Done!
 
-Aplikasi sudah ready. Coba aja semua fitur di dashboard.
+Aplikasi sudah ready. Coba semua fitur di dashboard.
 
 ---
 
@@ -132,7 +132,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Kalo kamu pake password MySQL yang beda, edit `DB_PASSWORD=` dengan password kamu.
+Kalo pake password MySQL yang beda, edit `DB_PASSWORD=` dengan password.
 
 ### Migrations & Seeding
 
