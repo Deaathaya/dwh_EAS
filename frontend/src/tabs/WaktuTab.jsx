@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 export default function WaktuTab() {
   const [waktu, setWaktu] = useState([]);
   const [form, setForm] = useState({ tanggal: '' });
+  const [editId, setEditId] = useState(null);
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
@@ -29,8 +30,13 @@ export default function WaktuTab() {
     }
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/waktu', {
-        method: 'POST',
+      const method = editId ? 'PUT' : 'POST';
+      const url = editId
+        ? `http://127.0.0.1:8000/api/waktu/${editId}`
+        : 'http://127.0.0.1:8000/api/waktu';
+
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ tanggal: form.tanggal })
       });
@@ -38,12 +44,18 @@ export default function WaktuTab() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Gagal menyimpan');
 
-      setMessage({ type: 'success', text: 'Tanggal ditambahkan!' });
+      setMessage({ type: 'success', text: editId ? 'Tanggal diperbarui!' : 'Tanggal ditambahkan!' });
       setForm({ tanggal: '' });
+      setEditId(null);
       fetchWaktu();
     } catch (err) {
       setMessage({ type: 'error', text: err.message });
     }
+  };
+
+  const handleEdit = (w) => {
+    setForm({ tanggal: w.tanggal });
+    setEditId(w.id_waktu);
   };
 
   const handleDelete = async (id) => {
@@ -65,7 +77,7 @@ export default function WaktuTab() {
       {message && <div className={`message ${message.type}`}>{message.text}</div>}
 
       <div className="form-section">
-        <h2>Tambah Tanggal</h2>
+        <h2>{editId ? 'Edit Tanggal' : 'Tambah Tanggal'}</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>
@@ -80,8 +92,20 @@ export default function WaktuTab() {
           </div>
           <div className="button-group">
             <button type="submit" className="btn btn-primary">
-              Simpan
+              {editId ? 'Perbarui' : 'Simpan'}
             </button>
+            {editId && (
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={() => {
+                  setEditId(null);
+                  setForm({ tanggal: '' });
+                }}
+              >
+                Batal
+              </button>
+            )}
           </div>
         </form>
       </div>
@@ -111,6 +135,13 @@ export default function WaktuTab() {
                   <td>{w.bulan_nama}</td>
                   <td>Q{w.kuartal}</td>
                   <td>
+                    <button
+                      className="btn btn-success"
+                      onClick={() => handleEdit(w)}
+                      style={{ padding: '6px 12px', fontSize: '12px', marginRight: '5px' }}
+                    >
+                      Edit
+                    </button>
                     <button
                       className="btn btn-danger"
                       onClick={() => handleDelete(w.id_waktu)}

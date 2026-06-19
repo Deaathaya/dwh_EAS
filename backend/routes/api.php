@@ -15,7 +15,7 @@ Route::get('/health', function () {
 // Dimensi Routes
 Route::apiResource('produk', ProdukController::class);
 Route::apiResource('pelanggan', PelangganController::class);
-Route::apiResource('waktu', WaktuController::class)->only(['index', 'store', 'destroy']);
+Route::apiResource('waktu', WaktuController::class)->only(['index', 'store', 'update', 'destroy']);
 Route::apiResource('penjualan', PenjualanController::class);
 
 // Analytics Routes

@@ -33,6 +33,26 @@ class WaktuController extends Controller
         return response()->json(['id_waktu' => $waktu->id_waktu], 201);
     }
 
+    public function update(Request $request, Waktu $waktu)
+    {
+        $validated = $request->validate([
+            'tanggal' => 'required|date|unique:dim_waktu,tanggal,' . $waktu->id_waktu . ',id_waktu',
+        ]);
+
+        $date = Carbon::parse($validated['tanggal']);
+        $bulanNama = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+        $waktu->update([
+            'tanggal' => $validated['tanggal'],
+            'tahun' => $date->year,
+            'bulan' => $date->month,
+            'bulan_nama' => $bulanNama[$date->month],
+            'kuartal' => ceil($date->month / 3),
+        ]);
+
+        return response()->json(['success' => true]);
+    }
+
     public function destroy(Waktu $waktu)
     {
         $waktu->delete();

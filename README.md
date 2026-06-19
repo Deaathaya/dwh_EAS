@@ -2,7 +2,11 @@
 
 Dashboard penjualan untuk menganalisis tren, produk, dan pelanggan dengan visualisasi data real-time. Buat dengan React + Node.js + SQLite.
 
+<<<<<<< HEAD
 ## Quick Start
+=======
+## 🚀 Quick Start
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 Pastikan kamu punya:
 - **PHP 8.1+**
@@ -56,11 +60,19 @@ Frontend bakal buka otomatis atau buka manual `http://localhost:5173`
 
 ### 5. Done!
 
+<<<<<<< HEAD
 Aplikasi sudah ready. Coba semua fitur di dashboard.
 
 ---
 
 ## Apa Aja Fitur yang Ada?
+=======
+Aplikasi sudah ready. Coba aja semua fitur di dashboard.
+
+---
+
+## 📊 Apa Aja Fitur yang Ada?
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 ### Dashboard
 - 3 chart buat lihat total penjualan, tren bulanan, sama top customers
@@ -75,7 +87,11 @@ Aplikasi sudah ready. Coba semua fitur di dashboard.
 
 ---
 
+<<<<<<< HEAD
 ## Struktur Folder
+=======
+## 🗂️ Struktur Folder
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 ```
 .
@@ -103,7 +119,11 @@ Aplikasi sudah ready. Coba semua fitur di dashboard.
 
 ---
 
+<<<<<<< HEAD
 ## Database Integration
+=======
+## 🗄️ Database Integration
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 Backend pakai **Laravel** dengan **MySQL**. Semua database setup udah otomatis dengan command di atas.
 
@@ -132,7 +152,11 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
+<<<<<<< HEAD
 Kalo pake password MySQL yang beda, edit `DB_PASSWORD=` dengan password.
+=======
+Kalo kamu pake password MySQL yang beda, edit `DB_PASSWORD=` dengan password kamu.
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 ### Migrations & Seeding
 
@@ -167,7 +191,11 @@ Kalo semua return angka > 0, database connection aman!
 
 ---
 
+<<<<<<< HEAD
 ## API Endpoints
+=======
+## 🔌 API Endpoints
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 Backend adalah API REST yang built-in dengan Laravel. Semua endpoint ada prefix `/api`.
 
@@ -226,7 +254,11 @@ Daftar pelanggan dengan belanja tertinggi. Filter kategori optional.
 
 ---
 
+<<<<<<< HEAD
 ## Troubleshooting
+=======
+## 🆘 Troubleshooting
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 ### MySQL tidak running
 **Gejala**: `SQLSTATE[HY000] [2002] Connection refused`
@@ -303,7 +335,11 @@ Terus update frontend API URL ke `http://localhost:8001`
 
 ---
 
+<<<<<<< HEAD
 ## Tech Stack
+=======
+## 📝 Tech Stack
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 - **Frontend**: React 18 + Vite + CSS3
 - **Backend**: Laravel 11 (PHP 8.1+)
@@ -312,7 +348,11 @@ Terus update frontend API URL ke `http://localhost:8001`
 
 ---
 
+<<<<<<< HEAD
 ## Features
+=======
+## 🎨 Features
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 - ✅ Responsive design (desktop, tablet, mobile)
 - ✅ Real-time filtering
@@ -325,7 +365,11 @@ Terus update frontend API URL ke `http://localhost:8001`
 
 ---
 
+<<<<<<< HEAD
 ## Sample Data
+=======
+## 📊 Sample Data
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 Database uda punya:
 - 5 produk (Elektronik + Pakaian)
@@ -337,7 +381,11 @@ Cukup buat testing semua fitur. Bisa tambah/edit data lewat aplikasi.
 
 ---
 
+<<<<<<< HEAD
 ## Development
+=======
+## 🚀 Development
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 ### Frontend Development
 
@@ -382,7 +430,11 @@ Penjualan::sum('total_harga')  // Total penjualan
 
 ---
 
+<<<<<<< HEAD
 ## Catatan Penting
+=======
+## 📝 Catatan Penting
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 ### Database
 - Database auto-create lewat `php artisan migrate` (ngga perlu import SQL file)
@@ -408,7 +460,11 @@ Penjualan::sum('total_harga')  // Total penjualan
 
 ---
 
+<<<<<<< HEAD
 ## Checklist Setup
+=======
+## 🎯 Checklist Setup
+>>>>>>> 9cbab7f (edit pada Waktu)
 
 Pastiin semua ini uda done:
 - [ ] MySQL running dan bisa di-access
@@ -425,4 +481,10 @@ Pastiin semua ini uda done:
 
 ---
 
+<<<<<<< HEAD
 Cek file `DOKUMENTASI_PROYEK.md` buat info lengkap tentang arsitektur dan database schemanya
+=======
+**Selamat! Aplikasi sudah siap di-explore!**
+
+Ada pertanyaan? Cek file `DOKUMENTASI_PROYEK.md` buat info lebih lengkap tentang arsitektur dan database schema.
+>>>>>>> 9cbab7f (edit pada Waktu)
